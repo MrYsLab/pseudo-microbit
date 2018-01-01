@@ -3,11 +3,11 @@ RATE_1MBIT = 2
 RATE_2MBIT = 3
 
 
-def radio_on():
+def on():
     pass
 
 
-def radio_off():
+def off():
     pass
 
 
@@ -26,6 +26,8 @@ def send_bytes(message):
 def receive_bytes():
     pass
 
+def receive_bytes_into(buffer):
+    pass
 
 def send():
     pass

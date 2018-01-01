@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pseudo-microbit',
-    version='0.1.1',
+    version='0.1.2',
     py_modules=['microbit', 'music', 'neopixel',
                 'os', 'speech', 'radio'],
     url='https://github.com/MrYsLab/pseudo-microbit',
