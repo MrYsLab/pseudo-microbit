@@ -23,13 +23,13 @@ def send_bytes(message):
     pass
 
 
-def receive_bytes():
+def receive_bytes(msg):
     pass
 
 def receive_bytes_into(buffer):
     pass
 
-def send():
+def send(msg):
     pass
 
 

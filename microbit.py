@@ -20,6 +20,9 @@ def temperature():
 
 
 class Button:
+    def __init__(self):
+        pass
+
     def is_pressed(self):
         pass
 
@@ -31,6 +34,7 @@ class Button:
 
 
 button_a = Button()
+
 button_b = Button()
 
 
