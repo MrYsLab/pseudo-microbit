@@ -2,9 +2,12 @@ from setuptools import setup
 
 setup(
     name='pseudo-microbit',
-    version='0.1.4',
-    py_modules=['microbit', 'music', 'neopixel',
+    version='0.1.5',
+    py_modules=['microbit', 'compass', 'display',
+                'i2c', 'spi', 'uart''music', 'neopixel',
                 'os', 'speech', 'radio'],
+    install_requires=['microfs',
+                      'uflash'],
     url='https://github.com/MrYsLab/pseudo-microbit',
     download_url='https://github.com/MrYsLab/pseudo-microbit',
     license='MIT',
