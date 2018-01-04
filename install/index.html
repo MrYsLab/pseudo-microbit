@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Working With PyCharm - Using PyCharm To Program The micro:bit</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Working With PyCharm";
+    var mkdocs_page_input_path = "install.md";
+    var mkdocs_page_url = "/install/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Using PyCharm To Program The micro:bit</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Working With PyCharm</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#installing-pycharm">Installing PyCharm</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#creating-a-new-project">Creating A New Project</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#viewing-the-toolbar">Viewing The Toolbar</a></li>
+    
+
+    <li class="toctree-l2"><a href="#adding-a-python-file-to-the-project">Adding A Python File To The Project</a></li>
+    
+
+    <li class="toctree-l2"><a href="#making-pycharm-microbit-aware">Making PyCharm micro:bit Aware</a></li>
+    
+
+    <li class="toctree-l2"><a href="#adding-uflash-and-microfs-as-external-tools">Adding uflash and microfs As External Tools</a></li>
+    
+
+    <li class="toctree-l2"><a href="#flashing-programs-to-the-microbit">Flashing Programs To The micro:bit</a></li>
+    
+
+    <li class="toctree-l2"><a href="#working-with-the-persistent-file-system">Working With The Persistent File System</a></li>
+    
+
+    <li class="toctree-l2"><a href="#conclusion">Conclusion</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../contact/">Contact Information</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Using PyCharm To Program The micro:bit</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Working With PyCharm</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installing-pycharm">Installing PyCharm</h1>
+<p>Go to the <a href="https://www.jetbrains.com/pycharm/specials/pycharm/pycharm.html?gclid=Cj0KCQiAsqLSBRCmARIsAL4Pa9S5NW3-zPQTSx4dEbYkGv6nZp71jKUEFPeRojIDn4ueKex1engZZP4aAu3DEALw_wcB&amp;gclsrc=aw.ds.ds&amp;dclid=CKub-YertdgCFdVDNwodJK4AAg">PyCharm home page</a> 
+and download the latest version of PyCharm Community (or Professional) Edition for your operating system. </p>
+<p>After downloading, install PyCharm on your computer and launch it.</p>
+<h2 id="creating-a-new-project">Creating A New Project</h2>
+<p>When you see the following screen appear, select <em>Create New Project</em>.</p>
+<p><img align="center" src="../images/create_new_project.png"> </p>
+<p>In the next screen, give your project a name. For this tutorial, I am calling the project <em>pycharm_microbit_demo</em>.</p>
+<p><img align="center" src="../images/new_project_screen.png"> </p>
+<p>By default, PyCharm uses Python virtual environments and by clicking <em>Create</em> we accept this default.
+ If you are unfamiliar with virtual environments, essentially, a virtual environment provides a sandbox for your project.
+A virtual environment isolates your project from all other project environments, allowing you to tailor your environment
+to use specific versions of Python libraries without having adverse affects on other projects.</p>
+<p>PyCharm automatically creates and manages the virtual environment for you, so once the project is created, you can
+ all but forget you are in a virtual environment.
+You can read more about virtual environments <a href="https://realpython.com/blog/python/python-virtual-environments-a-primer/">here</a>.</p>
+<p>After hitting the <em>Create</em> button, within a few moments you should see a new project screen similar to this:</p>
+<p><img align="center" src="../images/project_screen.png"> </p>
+<h1 id="viewing-the-toolbar">Viewing The Toolbar</h1>
+<p>For convenience, let's expose the Toolbar to save a few mouse clicks. Click on View/Toolbar</p>
+<p><img align="center" src="../images/toolbar.png"> </p>
+<p>The toolbar is now exposed at the top of the screen.</p>
+<p><img align="center" src="../images/tool_bar_exposed.png"> </p>
+<h1 id="adding-a-python-file-to-the-project">Adding A Python File To The Project</h1>
+<p>Now let's add a Python file that imports and uses the micro:bit MicroPython module and see what happens.</p>
+<p>On the left hand side of the screen, under the blue <em>Project</em> banner, right click <em>pycharm_microbit_demo</em>, select <em>New</em> and
+then <em>Python File</em></p>
+<p><img align="center" src="../images/new_python_file.png"></p>
+<p>Give the file a name. The .py extension will automatically be added to the name. I am going to call this file
+<em>demo</em>. </p>
+<p>Copy and paste this file into the editor.</p>
+<pre><code>ffrom microbit import *
+
+while True:
+    if button_a.is_pressed():
+        display.show(Image.YES)
+    elif button_b.is_pressed():
+        display.show(Image.NO)
+    else:
+        display.show(Image.ASLEEP)
+
+
+</code></pre>
+
+<p>What's with all those wavy red lines?</p>
+<p><img align="center" src="../images/syntax_errors.png"></p>
+<p>They are not only ugly, but its PyCharm telling us that we need to fix something.
+Each of those red lines represents an <em>unresolved reference</em> error. Move your mouse cursor
+over any of those lines to get an explanation of the error.</p>
+<p>Why are there unresolved references? The reason is that PyCharm is not aware of 
+the <a href="http://microbit-micropython.readthedocs.io/en/latest/microbit_micropython_api.html"><em>micro:bit MicroPython API</em></a>.
+The module supporting the API is not part of the standard Python library.</p>
+<p>To fix that, we need to add the micro:bit MicroPython API definitions to PyCharm.
+Those definitions are contained in a Python package I created called <a href="https://github.com/MrYsLab/pseudo-microbit">pseudo-microbit</a>.
+ This is an open source package that anyone can download from the <a href="https://pypi.python.org/pypi">PyPi</a> package management system.
+ We will let PyCharm download and install this package for us.</p>
+<h1 id="making-pycharm-microbit-aware">Making PyCharm <em>micro:bit</em> Aware</h1>
+<p><strong>Step 1:</strong> Click on the <em>Settings</em> icon on the Toolbar.</p>
+<p><img align="center" src="../images/settings_icon.png"></p>
+<p><strong>Step 2</strong>: Select <em>Project Interpreter</em> on the left side of the screen and then click the green plus sign to bring up 
+the <em>Install</em> menu.</p>
+<p><img align="center" src="../images/proj_interpreter.png"></p>
+<p><strong>Step 3</strong>: Type <em>pseudo-microbit</em> at the top of the screen and then press the <em>Install Package</em> button at the bottom left
+of the screen. Wait for the <em>successful install</em> message to appear, then close this window and the settings window
+to get back to the editor.</p>
+<p><img align="center" src="../images/pseudo_microbit.png"></p>
+<p>All the wavy red lines are gone, and there are no more unresolved references.</p>
+<p><img align="center" src="../images/references_resolved.png"></p>
+<p>And now, as we type in new code, PyCharm will give us <em>type hints</em>.</p>
+<p><img align="center" src="../images/typehints.png"></p>
+<p>Select the method or value from the type hint menu and double click to have PyCharm perform
+code completion for you.</p>
+<h1 id="adding-uflash-and-microfs-as-external-tools">Adding uflash and microfs As External Tools</h1>
+<p>When we installed <em>pseudo-microbit</em>, two additional packages were automatically added to our virtual environment.</p>
+<ul>
+<li>
+<p><a href="https://github.com/ntoll/uflash"><strong>uflash</strong></a> - the micro:bit flash utility.</p>
+</li>
+<li>
+<p><a href="https://github.com/ntoll/microfs"><strong>microfs</strong></a> - the micro:bit persistent file system utility.</p>
+</li>
+</ul>
+<p>We could run these from the terminal window built into PyCharm, but it would mean having to
+type in the entire command line manually.</p>
+<p>Let's add these utilities as <strong><em>External Tools</em></strong> that we can invoke them with the click of the mouse.</p>
+<p><strong>Step 1</strong>: Click on the <em>Settings</em> icon again, but this time select <em>Tools/External Tools</em> and click on the <em>green plus</em>.</p>
+<p><img align="center" src="../images/add_uflash.png"></p>
+<p><strong>Step 2</strong>: Fill out the <em>Create Tool</em> dialog and click Ok.</p>
+<p><img align="center" src="../images/create_uflash.png"></p>
+<p><strong>Step 3</strong>: While we're in this section of the program, let's go ahead and fill out external tool
+commands for the 4 <em>microfs</em> commands:</p>
+<ul>
+<li>
+<p><strong>ls</strong>    - lists the files in the file system </p>
+</li>
+<li>
+<p><strong>put</strong>   - places a file into the file system</p>
+</li>
+<li>
+<p><strong>get</strong>   - retrieves a file from the file system</p>
+</li>
+<li>
+<p><strong>rm</strong>    - removes a file from the file system</p>
+</li>
+</ul>
+<p><strong>Note:</strong> The microfs utility uses the command name of <strong>ufs</strong>.
+For example to run the <strong>ls</strong> command on a command line, you would type:
+ufs ls</p>
+<p>Let's continue with creating the External Tool entries. Click on the copy icon.</p>
+<p><img align="center" src="../images/copy_tool.png"></p>
+<p><strong>Step 4</strong>: Create an external tool entry for each of the commands. Use the Copy icon for each command.</p>
+<p><img align="center" src="../images/microfs_ls.png"></p>
+<p><img align="center" src="../images/microfs_put.png"></p>
+<p><img align="center" src="../images/microfs_get.png"></p>
+<p><img align="center" src="../images/microfs_rm.png"></p>
+<p>When your are done, click <em>Apply</em> and then <em>Ok</em></p>
+<p><img align="center" src="../images/tool_apply.png"></p>
+<p><strong>Note:</strong> These external tools are now available globally within PyCharm. When you
+create your next project, they will already be in place.</p>
+<h1 id="flashing-programs-to-the-microbit">Flashing Programs To The micro:bit</h1>
+<p>To flash a program to the micro:bit, right click on a file name in the Project
+window, select <em>External Tools</em>, and then select <em>uflash</em> from the context menu.</p>
+<p>The file will be flashed to the micro:bit.</p>
+<p><img align="center" src="../images/flash.png"></p>
+<h1 id="working-with-the-persistent-file-system">Working With The Persistent File System</h1>
+<p>There are times that you may wish to add functionality to your project that is not part of the standard 
+micro:bit library. To import and gain access to the module, you will need to
+place the library in the micro:bit persistent file system.</p>
+<p>The <a href="https://github.com/microbit-playground/microbit-servo-class">*servo library *</a> is a prime example of such
+a module.
+There are explicit instructions on how to import an external module in the <em>servo</em> distribution.
+Just click the <em>servo library</em> link to view the instructions.</p>
+<p>After copying the servo.py source code from the servo distribution, I created a new directory
+called <em>external_modules</em> and then placed servo.py in that directory.</p>
+<p><img align="center" src="../images/servo_py.png"></p>
+<p>To add servo.py to the persistent file system, right click on the file name, select External Tools and
+then select <em>ufs put</em>.</p>
+<p><img align="center" src="../images/microfs_putit.png"></p>
+<p>To make sure that file was added, right click servo.py again, but this time, select <em>ufs ls</em>.</p>
+<p><img align="center" src="../images/ufs_ls.png"></p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Now that you have configured PyCharm to be micro:bit MicroPython aware,
+you are now ready to create Python programs for the micro:bit using PyCharm, so try it out!</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../contact/" class="btn btn-neutral float-right" title="Contact Information">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../contact/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
