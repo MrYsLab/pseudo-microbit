@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pseudo-microbit',
-    version='0.1.5',
+    version='1.0',
     py_modules=['microbit', 'compass', 'display',
                 'i2c', 'spi', 'uart''music', 'neopixel',
                 'os', 'speech', 'radio'],
@@ -16,7 +16,7 @@ setup(
     description='API to be used with PyCharm for micro:bit python development',
     keywords=['micro:bit', 'microbit', 'micropython'],
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Other Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
