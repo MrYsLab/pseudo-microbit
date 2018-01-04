@@ -1,4 +1,4 @@
-![logo](https://raw.github.com/MrYsLab/pseudo-microbit/master/images/logo.png)
+![logo](https://raw.github.com/MrYsLab/pseudo-microbit/master/docs/images/logo.png)
 
 # pseudo-microbit
 
