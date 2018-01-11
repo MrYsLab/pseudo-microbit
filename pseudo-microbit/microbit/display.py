@@ -32,7 +32,7 @@ def show(image: Image) -> None:
 
 
 @overload
-def show(iterable: Iterable[Image, str], delay: int = 400, *,
+def show(iterable: Iterable[Image, str], delay: int = 400,
          wait: bool = True, loop: bool =False, clear: bool = False) -> None:
     """Display images or letters from the ``iterable`` in sequence, with
     ``delay`` milliseconds between them.
@@ -56,7 +56,7 @@ def show(iterable: Iterable[Image, str], delay: int = 400, *,
     """
 
 
-def scroll(string: str, delay: int = 150, *, wait: bool = True,
+def scroll(string: str, delay: int = 150, wait: bool = True,
            loop: bool = False, monospace: bool = False) -> None:
     """Similar to ``show``, but scrolls the ``string`` horizontally instead. The
     ``delay`` parameter controls how fast the text is scrolling.
