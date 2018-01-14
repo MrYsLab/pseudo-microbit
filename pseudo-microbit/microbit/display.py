@@ -26,14 +26,12 @@ def clear() -> None:
     """Set the brightness of all LEDs to 0 (off)."""
 
 
-@overload
-def show(image: Image) -> None:
-    """Display the ``image``."""
+# @overload
+# def show(image: Image) -> None:
+#     """Display the ``image``."""
 
-
-@overload
-def show(iterable: Iterable[Image, str], delay: int = 400,
-         wait: bool = True, loop: bool =False, clear: bool = False) -> None:
+# @overload
+def show(iterable: Iterable[Image, str], delay: int = 400, wait: bool = True, loop: bool = False, clear: bool = False) -> None:
     """Display images or letters from the ``iterable`` in sequence, with
     ``delay`` milliseconds between them.
 
@@ -55,9 +53,7 @@ def show(iterable: Iterable[Image, str], delay: int = 400,
         interrupt is prohibited and will raise a ``MemoryError``.
     """
 
-
-def scroll(string: str, delay: int = 150, wait: bool = True,
-           loop: bool = False, monospace: bool = False) -> None:
+def scroll(string: str, delay: int = 150, wait: bool = True, loop: bool = False, monospace: bool = False) -> None:
     """Similar to ``show``, but scrolls the ``string`` horizontally instead. The
     ``delay`` parameter controls how fast the text is scrolling.
 
