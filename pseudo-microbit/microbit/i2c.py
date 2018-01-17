@@ -22,8 +22,9 @@ particularly long wires or large number of devices you may need to add
 additional pull-up resistors, to ensure noise-free communication.
 """
 
-from . import pin19, pin20, pin15, MicroBitDigitalPin
+from . import pin19, pin20
 from typing import Union
+
 
 def init(freq: int = 100000, sda: int = pin20, scl: int = pin19) -> None:
     """Re-initialize peripheral with the specified clock frequency ``freq`` on the

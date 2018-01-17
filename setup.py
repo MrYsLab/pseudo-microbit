@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pseudo-microbit',
-    version='1.03',
+    version='1.04',
     py_modules=['microbit', 'compass', 'display',
                 'i2c', 'spi', 'uart', 'music', 'neopixel',
                 'os', 'speech', 'radio'],

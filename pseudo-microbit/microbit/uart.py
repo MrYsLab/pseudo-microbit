@@ -7,7 +7,7 @@ from typing import Optional, Union
 
 
 def init(baudrate: int = 9600, bits: int = 8, parity: int = None,
-         stop: int = 1, tx: MicroBitDigitalPin = None,
+         stop: int = 1, *, tx: MicroBitDigitalPin = None,
          rx: MicroBitDigitalPin = None) -> None:
     """Initialize serial communication with the specified parameters on the
     specified ``tx`` and ``rx`` pins. Note that for correct communication, the

@@ -120,7 +120,7 @@ Musical Notation
     """
 from typing import Tuple, Union, List
 
-from microbit import pin0, MicroBitAnalogDigitalPin
+from . microbit import pin0, MicroBitAnalogDigitalPin
 
 DADADADUM = 0
 ENTERTAINER = 1
