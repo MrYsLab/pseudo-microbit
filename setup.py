@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pseudo-microbit',
-    version='1.04',
+    version='1.5',
     py_modules=['microbit', 'compass', 'display',
                 'i2c', 'spi', 'uart', 'music', 'neopixel',
                 'os', 'speech', 'radio'],
@@ -21,8 +21,6 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Topic :: Software Development',
