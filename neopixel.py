@@ -77,7 +77,7 @@ make sure you have show() at least somewhere otherwise your updates won’t be s
 
 
 """
-from . microbit import MicroBitAnalogDigitalPin
+from microbit import MicroBitAnalogDigitalPin
 
 def NeoPixel(pin: MicroBitAnalogDigitalPin, n: int)-> None:
     """
