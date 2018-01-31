@@ -75,7 +75,10 @@
     <li class="toctree-l2"><a href="#making-pycharm-microbit-aware">Making PyCharm micro:bit Aware</a></li>
     
 
-    <li class="toctree-l2"><a href="#adding-uflash-and-microfs-as-external-tools">Adding uflash and microfs As External Tools</a></li>
+    <li class="toctree-l2"><a href="#adding-uflash-pyminifier-and-microfs-as-external-tools">Adding uflash, pyminifier and microfs As External Tools</a></li>
+    
+
+    <li class="toctree-l2"><a href="#minimizing-python-files">Minimizing Python Files</a></li>
     
 
     <li class="toctree-l2"><a href="#flashing-programs-to-the-microbit">Flashing Programs To The micro:bit</a></li>
@@ -199,8 +202,8 @@ to get back to the editor.</p>
 <p><img align="center" src="../images/typehints.png"></p>
 <p>Select the method or value from the type hint menu and double click to have PyCharm perform
 code completion for you.</p>
-<h1 id="adding-uflash-and-microfs-as-external-tools">Adding uflash and microfs As External Tools</h1>
-<p>When we installed <em>pseudo-microbit</em>, two additional packages were automatically added to our virtual environment.</p>
+<h1 id="adding-uflash-pyminifier-and-microfs-as-external-tools">Adding uflash, pyminifier and microfs As External Tools</h1>
+<p>When we installed <em>pseudo-microbit</em>, three additional packages were automatically added to our virtual environment.</p>
 <ul>
 <li>
 <p><a href="https://github.com/ntoll/uflash"><strong>uflash</strong></a> - the micro:bit flash utility.</p>
@@ -208,7 +211,13 @@ code completion for you.</p>
 <li>
 <p><a href="https://github.com/ntoll/microfs"><strong>microfs</strong></a> - the micro:bit persistent file system utility.</p>
 </li>
+<li>
+<p><a href="https://github.com/liftoff/pyminifier"><strong>pyminifier</strong></a> - a utility to "minify" python files.</p>
+</li>
 </ul>
+<p>The pyminifier program removes all comments and unnecessary white space from a python file. This is
+useful, since the micro:bit has limited memory resources and allows us to flash programs that would
+otherwise not fit.</p>
 <p>We could run these from the terminal window built into PyCharm, but it would mean having to
 type in the entire command line manually.</p>
 <p>Let's add these utilities as <strong><em>External Tools</em></strong> that we can invoke them with the click of the mouse.</p>
@@ -242,10 +251,22 @@ ufs ls</p>
 <p><img align="center" src="../images/microfs_put.png"></p>
 <p><img align="center" src="../images/microfs_get.png"></p>
 <p><img align="center" src="../images/microfs_rm.png"></p>
+<p><strong>Step 5</strong>: Lastly, add pyminifier as an external tool. As we did in Step 3, we are going to click on the 
+copy icon. Fill out the form to look like the following:</p>
+<p><img align="center" src="../images/minify.png"></p>
 <p>When your are done, click <em>Apply</em> and then <em>Ok</em></p>
 <p><img align="center" src="../images/tool_apply.png"></p>
 <p><strong>Note:</strong> These external tools are now available globally within PyCharm. When you
 create your next project, they will already be in place.</p>
+<h1 id="minimizing-python-files">Minimizing Python Files</h1>
+<p>The micro:bit has limited memory resources, so in order to be able to flash the largest program
+we can, we need to remove all comments and unnecessary white space. This is called <em>minifying</em> the program.</p>
+<p>When we use the minify external tool, the original Python file is left untouched, with its comments
+and white space intact, and a new file is created with  "_min" added to the original file name.</p>
+<p>So for example, our commented file's name is <strong>abc.py</strong>, after minifying, the additional file
+named <strong>abc_min.py</strong> will be created.</p>
+<p>We will flash using the minified file.</p>
+<p><img align="center" src="../images/minify_screen.png"></p>
 <h1 id="flashing-programs-to-the-microbit">Flashing Programs To The micro:bit</h1>
 <p>To flash a program to the micro:bit, right click on a file name in the Project
 window, select <em>External Tools</em>, and then select <em>uflash</em> from the context menu.</p>
