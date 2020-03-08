@@ -24,13 +24,13 @@ We assume you have done this for the examples below.
 from typing import Optional
 
 
-RATE_250KBIT: int
+RATE_250KBIT: int = 2
 """Constant used to indicate a throughput of 256 Kbit a second."""
 
-RATE_1MBIT: int
+RATE_1MBIT: int = 0
 """Constant used to indicate a throughput of 1 MBit a second."""
 
-RATE_2MBIT: int
+RATE_2MBIT: int = 1
 """Constant used to indicate a throughput of 2 MBit a second."""
 
 
