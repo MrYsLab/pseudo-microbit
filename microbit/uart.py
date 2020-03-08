@@ -2,7 +2,7 @@
 a serial interface.
 """
 
-from . import MicroBitDigitalPin
+from ._pin import MicroBitDigitalPin
 from typing import Optional, Union
 
 
@@ -84,11 +84,12 @@ def readline() -> Optional[bytes]:
     included in the returned bytes.
     """
 
+
 def write(buf: Union[bytes, bytearray]) -> Optional[int]:
     """Write the buffer of bytes to the bus.
 
     Return value: number of bytes written or ``None`` on timeout.
     """
 
-ODD: int
-EVEN: int
+ODD: int = 1
+EVEN: int = 2

@@ -9,7 +9,7 @@ for three signals:
 """
 
 
-from . import pin13, pin14, pin15, MicroBitDigitalPin
+from ._pin import pin13, pin14, pin15, MicroBitDigitalPin
 from typing import Union
 
 

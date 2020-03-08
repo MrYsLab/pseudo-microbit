@@ -9,8 +9,8 @@ you can use::
     microbit.display.scroll('Hello!', wait=False, loop=True)
 """
 
-from . import Image
-from typing import overload, Iterable
+from ._image import Image
+from typing import overload, Iterable, Union
 
 def get_pixel(x: int, y: int) -> int:
     """Return the brightness of the LED at column ``x`` and row ``y`` as an
@@ -32,7 +32,7 @@ def show(image: Image) -> None:
 
 
 @overload
-def show(iterable: Iterable[Image, str], delay: int = 400, *,
+def show(iterable: Iterable[Union[Image, str]], delay: int = 400, *,
          wait: bool = True, loop: bool =False, clear: bool = False) -> None:
     """Display images or letters from the ``iterable`` in sequence, with
     ``delay`` milliseconds between them.
