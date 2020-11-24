@@ -10,7 +10,8 @@ you can use::
 """
 
 from . import Image
-from typing import overload, Iterable
+from typing import overload, Iterable, Union
+
 
 def get_pixel(x: int, y: int) -> int:
     """Return the brightness of the LED at column ``x`` and row ``y`` as an
@@ -56,7 +57,7 @@ def show(iterable: Iterable[Image, str], delay: int = 400, *,
     """
 
 
-def scroll(string: str, delay: int = 150, *, wait: bool = True,
+def scroll(string: Union[str, float], delay: int = 150, *, wait: bool = True,
            loop: bool = False, monospace: bool = False) -> None:
     """Similar to ``show``, but scrolls the ``string`` horizontally instead. The
     ``delay`` parameter controls how fast the text is scrolling.
