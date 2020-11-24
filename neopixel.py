@@ -77,23 +77,37 @@ make sure you have show() at least somewhere otherwise your updates won’t be s
 
 
 """
-from microbit import MicroBitAnalogDigitalPin
+from typing import Tuple, List, Union
 
-def NeoPixel(pin: MicroBitAnalogDigitalPin, n: int)-> None:
-    """
-    Initialise a new strip of n number of neopixel LEDs controlled via pin pin.
-    Each pixel is addressed by a position (starting from 0).
+from microbit import MicroBitDigitalPin
 
-    Neopixels are given RGB (red, green, blue) values between 0-255 as a tuple.
-    For example, (255,255,255) is white.
-    """
 
-def clear()->None:
-    """
-    Clear all the pixels.
-    """
+class NeoPixel:
 
-def show()->None:
-    """
-    Show the pixels. Must be called for any updates to become visible.
-    """
+    def __init__(self, pin: MicroBitDigitalPin, n: int):
+        """
+        Initialise a new strip of n number of neopixel LEDs controlled via pin pin.
+        Each pixel is addressed by a position (starting from 0).
+
+        Neopixels are given RGB (red, green, blue) values between 0-255 as a tuple.
+        For example, (255,255,255) is white.
+        """
+
+    def clear(self) -> None:
+        """
+        Clear all the pixels.
+        """
+
+    def show(self) -> None:
+        """
+        Show the pixels. Must be called for any updates to become visible.
+        """
+
+    def __len__(self) -> int:
+        pass
+
+    def __getitem__(self, key) -> Tuple[int, int, int]:
+        pass
+
+    def __setitem__(self, key: int, value: Union[Tuple[int, int, int], List[int]]):
+        pass
