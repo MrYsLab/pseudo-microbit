@@ -6,7 +6,7 @@ setup(
     packages=['microbit'],
     py_modules=['microbit', 'compass', 'display',
                 'i2c', 'spi', 'uart', 'music', 'neopixel',
-                'os', 'speech', 'radio'],
+                'os', 'speech', 'radio', 'micropython'],
     install_requires=['microfs',
                       'uflash',
                       'pyminifier'],
