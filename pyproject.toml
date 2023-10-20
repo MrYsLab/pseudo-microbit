@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages]
+find = {}  # Scan the project directory with the default parameters
+
+[project]
+name = "pseudo-microbit"
+version = "1.10"
+authors = [
+  { name="Alan Yorinks", email="MisterYsLab@gmail.com" },
+]
+description = "A pseudo implementation of the micro:bit micropython API."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "AGPL-3.0-or-later"}
+
+keywords=['micro:bit', 'micropython']
+classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Other Environment',
+        'Intended Audience :: Developers',
+        'Intended Audience :: Education',
+        'Operating System :: OS Independent',
+        'Topic :: Software Development :: Libraries :: Python Modules'
+    ]
+
+dependencies = [
+    "microfs", "uflash", "pyminifier3"
+]
+
+
+
+
+
