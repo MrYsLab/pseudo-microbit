@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: pseudo-microbit
+repo_url: https://github.com/MrYsLab/telemetrix-uno-r4
+copyright: > # should remain a link to the original theme
+  Copyright &copy; 2024 Alan Yorinks &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Last 
+  Modified:
+  October 11, 2024<br>
+
+
+nav:
+  - Introduction: index.md
+  - Working With Pycharm:
+      - Installing Pycharm: pycharm_install.md
+  - About: about.md
+# theme: windmill
+
+theme:
+  name: 'material'
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.footer
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [ telemetrix_uno_r4/wifi/telemetrix_uno_r4_wifi,
+                   telemetrix_uno_r4/wifi/telemetrix_uno_r4_wifi_aio,
+                   telemetrix_uno_r4/minima/telemetrix_uno_r4_minima,
+                   telemetrix_uno_r4/minima/telemetrix_uno_r4_minima_aio ]
+
+
+
