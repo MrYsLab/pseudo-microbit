@@ -10,8 +10,10 @@ copyright: > # should remain a link to the original theme
 
 nav:
   - Introduction: index.md
-  - Configuring PyCharm:
-      - Installing Pycharm: pycharm_install.md
+  - Installing And Configuring PyCharm:
+      - Installing PyCharm: pycharm_install.md
+      - Creating A PyCharm Project: create_project.md
+      - Install the required packages: packages.md
       - Installing pseudo-microbit: pm_install.md
       - Installing python-minimizer: minimizer_install.md
       - Adding python-minimizer to PyCharm External Tools: minimizer.md
