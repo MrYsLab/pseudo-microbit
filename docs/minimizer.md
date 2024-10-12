@@ -37,7 +37,6 @@ The macro will be expanded in the macro preview window and added to the field.
 
 ![](./images/macros.png)
 
-The macro will be expanded in the macro preview window and added to the field.
 
 The **Program** field should be edited to contain:
 
@@ -46,4 +45,22 @@ The **Program** field should be edited to contain:
 After inserting the **$PyInterpreterDirectory$**, we manually append a slash and
 name of the python-minimizer command.
 
+Next we add the command arguments to the Arguments field. I prefer to not have 
+original source file minified, but instead to create a new file that has "_min" 
+appended to the file name.
+
+To do this we use the following arguments:
+
+**-o $FileNameWithoutExtension$_min.$FileExt$ $FilePath$**
+
+The -o options specifies the output file, and $FilePath$ specifies the
+input file.
+
+The **Working Directory** is the directory where the file is found and the new file
+will be created.
+
+When you have completed entering all the information, click OK and you should see that
+python-minimizer external tool was created.
+
+![](./images/add_external_tool2.png)
 
