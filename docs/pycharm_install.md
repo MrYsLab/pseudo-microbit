@@ -19,10 +19,8 @@ the following screen:
 
 If you are prompted to disable input methods, you should do so.
 
-Click on the Plus sign button to create a new PyCharm project. The New Project
-dialog will appear.
 
-In PyCharm, a project is an organizational unit representing 
+In PyCharm, a _project_ is an organizational unit representing 
 a complete software solution. It's where you'll manage all your files, 
 settings, and configurations for a specific software development task.
 
@@ -30,6 +28,11 @@ Once your project is set up, this is where you'll create
 your micro:bit MicroPython source files. These files will be 
 located within your project's directory, which you can access from 
 the PyCharm interface.
+
+Click on the Plus sign button to create a new PyCharm project. The New Project
+dialog will appear.
+
+
 
 
 

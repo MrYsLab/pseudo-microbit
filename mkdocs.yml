@@ -16,9 +16,11 @@ nav:
       - Install the required packages:
         - Installing pseudo-microbit: pm_install.md
         - Installing python-minimizer: minimizer_install.md
-      - Adding python-minimizer to PyCharm External Tools: minimizer.md
-      - Adding uflash to PyCharm External Tools: uflash.md
-      - Adding microfs to PyCharm External Tools: mfs.md
+      - Configuring PyCharm To Run External Tools:
+        - Pycharm External Tools: external.md
+        - Adding python-minimizer to PyCharm External Tools: minimizer.md
+        - Adding uflash to PyCharm External Tools: uflash.md
+        - Adding microfs to PyCharm External Tools: mfs.md
   - About: about.md
 # theme: windmill
 
