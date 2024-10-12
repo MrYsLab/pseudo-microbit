@@ -18,3 +18,5 @@ micro:bit filesystem.
 
 PyCharm provides a built-in terminal, so if you prefer to interact with any of
 these utilities directly via command-line, you may do so.
+ 
+![](./images/terminal.png)
