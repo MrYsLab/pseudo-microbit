@@ -4,7 +4,7 @@ Select the desired file in the Project panel to minimize a Python file.
 
 Click on the _hamburger_ icon to bring up the main menu. 
 Slide the mouse over the _Tools_ selection, 
-select _External Tools_, and click on _uflash_.
+select _External Tools_, and click on _python-minimizer_.
 
 ![](./images/min_file1.png)
 

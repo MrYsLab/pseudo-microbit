@@ -5,12 +5,14 @@ It is invoked using the command named _ufs_.
 ## Attention Linux Users
 
 You may need to add your username to the dialout group to access the serial
-port. Is not you may see a permission denied message when trying to use the
+port. If not you may see a permission denied message when trying to use the
 ufs commands.
 
-To add your self to the dialout group, open a terminal window and type the following:
+To add yourself to the dialout group, open a terminal window and type the following:
 
-sudo usermod -a -G dialout YOUR_LINUX_LOGIN_ID
+**sudo usermod -a -G dialout YOUR_LINUX_LOGIN_ID**
+
+Replace **YOUR_LINUX_LOGIN_ID** with your actual login ID.
 
 Then reboot the operating system.
 

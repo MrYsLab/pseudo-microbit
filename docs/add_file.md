@@ -15,6 +15,7 @@ new file. The name we will enter is _button_test_. Now, hit the _Enter_ key.
 
 Note that you do not need to add the .py extension. Pycharm will do that 
 automatically for you.
+
 ![](./images/new_file3.png)
 
 Pycharm adds the new file to the Project panel and opens the file in the editor.

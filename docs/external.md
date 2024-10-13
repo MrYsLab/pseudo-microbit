@@ -13,7 +13,7 @@ The **_uflash_** utility is used to flash the BBC micro:bit with Python scripts.
 
 The **_microfs_** utility allows interaction with the limited file system provided 
 by MicroPython on the BBC micro:bit. Using this utility, you can list the files 
-on the device, copy a file to micro:bit file system, and retrieve a file from the
+on the device, copy a file to the micro:bit file system, and retrieve a file from the
 micro:bit filesystem.
 
 PyCharm provides a built-in terminal, so if you prefer to interact with 

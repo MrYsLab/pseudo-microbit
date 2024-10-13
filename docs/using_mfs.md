@@ -35,7 +35,7 @@ the file.
 ![](./images/fs3.png)
 
 Before adding servo.py to the 
-micro:bit persistent file system, let's examine its contents.
+micro:bit persistent file system, let's examine the persistent file system's contents.
 
 Select Tools/External Tools from the main 
 menu by first clicking on the Hamburger icon.
