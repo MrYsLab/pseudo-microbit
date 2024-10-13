@@ -21,6 +21,13 @@ nav:
         - Adding python-minimizer to PyCharm External Tools: minimizer.md
         - Adding uflash to PyCharm External Tools: uflash.md
         - Adding microfs to PyCharm External Tools: mfs.md
+  - Working With Python Files and External User Tools:
+    - Add A Directory To Your Project: add_directory.md
+    - Add A File To Your Project: add_file.md
+    - Minimize A File: file_min.md
+    - Upload The File To The micro:bit: upload.md
+    - Using the micro:bit Internal File System: using_mfs.md
+
   - About: about.md
 # theme: windmill
 

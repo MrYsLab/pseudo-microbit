@@ -1,6 +1,20 @@
 The microfs utility is used to interact with the limited file system provided
 by MicroPython on the BBC micro:bit. It is invoked using the command names **_ufs._**
 
+## Attention Linux Users
+
+You may need to add your username to the dialout group to access the serial
+port. Is not you may see a permission denied message when trying to use the
+ufs commands.
+
+To add your self to the dialout group, open a terminal window and type the following:
+
+sudo usermod -a -G dialout YOUR_LINUX_LOGIN_ID
+
+Then reboot the operating system.
+
+## Creating External Tools For UFS
+
 We will create an **External Tool** for the following ufs commands:
 
 * ls - list the files in the file system
@@ -47,3 +61,4 @@ then fill in the fields for each command
 * **Program**: $PyInterpreterDirectory$/ufs
 * **Arguments**: get $FileName$
 * **Working Directory**: $FileDir$
+
