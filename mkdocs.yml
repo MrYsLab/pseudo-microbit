@@ -28,7 +28,7 @@ nav:
     - Upload The File To The micro:bit: upload.md
     - Using the micro:bit Internal File System: using_mfs.md
 
-  - About: about.md
+  - Contact Info: contact.md
 # theme: windmill
 
 theme:
