@@ -6,8 +6,8 @@ To install PyCharm, go to the
 [PyCharm web page](https://www.jetbrains.com/pycharm/), 
 download your desired version, and install it on your computer.
 
-Some operating systems, such as Ubuntu Linux and Fedora Linux offer PyCharm 
-in their "software stores". If you use 
+Some operating systems, such as Ubuntu and Fedora Linux, offer PyCharm 
+in their "software stores." If you use 
 one of the stores, you do not need to download anything from the website above.
 
 ![](./images/pycharm_install_1.png)

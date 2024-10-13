@@ -4,7 +4,7 @@ the code to the micro:bit.
 
 Click on the _plus_ sign again, and in the search field, type _python-minimizer_. As 
 you type in the name, PyCharm provides possible matches. Select _python-minimizer_
-and
+ and
 press _Install Package_.
 
 ![](./images/install_minimizer.png)

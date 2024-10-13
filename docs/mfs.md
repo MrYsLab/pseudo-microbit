@@ -1,5 +1,6 @@
-The microfs utility is used to interact with the limited file system provided
-by MicroPython on the BBC micro:bit. It is invoked using the command names **_ufs._**
+The microfs utility interacts with the limited file system 
+provided by MicroPython on the BBC micro:bit. 
+It is invoked using the command named _ufs_.
 
 ## Attention Linux Users
 

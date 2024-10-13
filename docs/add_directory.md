@@ -1,7 +1,8 @@
 Let's add a Python file to our project.
 
-After opening PyCharm click on the _hamburger icon_ in the upper left to expose
-the main menu.
+After opening PyCharm, click the _hamburger_ icon on the upper left 
+to view the main menu.
+
 
 ![](./images/main_menu.png)
 
@@ -23,9 +24,9 @@ A dialog box appears in the center of the screen to enter a directory name.
 ![](./images/new_dir3.png)
 
 
-Let's call this directory _button_test_. After entering the name hit the _Enter_ key.
+Let's call this directory _button_test_. After entering the name, hit the _Enter_ key.
 
-The new directory appears in project panel.
+The new directory appears in the project panel.
 
 ![](./images/new_dir4.png)
 
