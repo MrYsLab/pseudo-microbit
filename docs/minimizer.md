@@ -56,8 +56,7 @@ To do this we use the following arguments:
 The -o options specifies the output file, and $FilePath$ specifies the
 input file.
 
-The **Working Directory** is the directory where the file is found and the new file
-will be created.
+The **Working Directory** is set to **$FileDir$**
 
 When you have completed entering all the information, click OK and you should see that
 python-minimizer external tool was created.
