@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../using_mfs/">
+        <link rel="prev" href="../add_file/">
       
+      
+        <link rel="next" href="../upload/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Contact Info - pseudo-microbit</title>
+        <title>Minimize A File - pseudo-microbit</title>
       
     
     
@@ -93,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contact Info
+              Minimize A File
             
           </span>
         </div>
@@ -523,17 +525,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -547,7 +551,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Working With Python Files and External User Tools
@@ -600,10 +604,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../file_min/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -612,6 +623,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -670,17 +682,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,7 +694,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -728,11 +732,19 @@
   
 
 
-  <h1>Contact Info</h1>
+  <h1>Minimize A File</h1>
 
-<p>If you have any comments or questions about this tutorial 
-or the pseudo-microbit distribution, please send an email to: MisterYsLab@gmail.com</p>
-<p>Or enter an issue at https://github.com/MrYsLab/pseudo-microbit</p>
+<p>Select the desired file in the Project panel to minimize a Python file.</p>
+<p><img alt="" src="../images/new_file6.png" /></p>
+<p>Click on the <em>hamburger</em> icon to bring up the main menu. 
+Slide the mouse over the <em>Tools</em> selection, 
+select <em>External Tools</em>, and click on <em>python-minimizer</em>.</p>
+<p><img alt="" src="../images/min_file1.png" /></p>
+<p>The results of the call to python-minimizer are shown in the <em>Run</em> window at the
+bottom of the screen. Since there were no errors, 
+a new file named button_test_min.py is added to the button_test directory.</p>
+<p>This file is now ready to be flashed to the micro:bit.</p>
+<p><img alt="" src="../images/min_file2.png" /></p>
 
 
 
@@ -762,7 +774,7 @@ or the pseudo-microbit distribution, please send an email to: MisterYsLab@gmail.
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../using_mfs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using the micro:bit Internal File System">
+          <a href="../add_file/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Add A File To Your Project">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -772,11 +784,27 @@ or the pseudo-microbit distribution, please send an email to: MisterYsLab@gmail.
                 Previous
               </span>
               <div class="md-ellipsis">
-                Using the micro:bit Internal File System
+                Add A File To Your Project
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../upload/" class="md-footer__link md-footer__link--next" aria-label="Next: Upload The File To The micro:bit">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Upload The File To The micro:bit
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     

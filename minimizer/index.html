@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../using_mfs/">
+        <link rel="prev" href="../external/">
       
+      
+        <link rel="next" href="../uflash/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Contact Info - pseudo-microbit</title>
+        <title>Adding python-minimizer to PyCharm External Tools - pseudo-microbit</title>
       
     
     
@@ -93,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contact Info
+              Adding python-minimizer to PyCharm External Tools
             
           </span>
         </div>
@@ -227,17 +229,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -251,7 +255,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Installing And Configuring PyCharm
@@ -389,17 +393,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
@@ -413,7 +419,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Configuring PyCharm To Run External Tools
@@ -445,10 +451,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../minimizer/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -457,6 +470,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -670,17 +684,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,7 +696,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -728,11 +734,46 @@
   
 
 
-  <h1>Contact Info</h1>
+  <h1>Adding python-minimizer to PyCharm External Tools</h1>
 
-<p>If you have any comments or questions about this tutorial 
-or the pseudo-microbit distribution, please send an email to: MisterYsLab@gmail.com</p>
-<p>Or enter an issue at https://github.com/MrYsLab/pseudo-microbit</p>
+<p>Open the Settings dialog by clicking on the gear wheel in the upper right-hand corner.</p>
+<p><img alt="" src="../images/settings.png" /></p>
+<p>Select <em>Settings</em></p>
+<p><img alt="" src="../images/settings2.png" /></p>
+<p>On the left side of the Settings screen, expand the <em>Tools</em> entry 
+and then select 
+<em>External Tools</em>.</p>
+<p><img alt="" src="../images/add_external_tool.png" /></p>
+<p>Click on the <em>Plus</em> sign.</p>
+<p><img alt="" src="../images/create_tool.png" /></p>
+<p>Now, let's fill in the specifics for <em>python-minimizer</em>.
+<img alt="" src="../images/edit_tool1.png" /></p>
+<p>Enter a name for the tool in the name field. You can name it anything you like.</p>
+<p>Enter a description for the tool.</p>
+<p>In the Tool Settings section, we need to enter the <em>Program</em>. The Program field
+contains a path to the command the tool will execute.</p>
+<p>PyCharm uses macros to help create the entries. 
+Pressing the Plus sign on the right of the Program field shows a 
+list of available macros. Select the desired option in the list 
+to add a macro and then press Insert.
+The macro will be expanded in the macro preview window and added to the field.</p>
+<p><img alt="" src="../images/macros.png" /></p>
+<p>The <strong>Program</strong> field should be edited to contain:</p>
+<p><strong>$PyInterpreterDirectory$/python-minimizer</strong></p>
+<p>After inserting the <strong>$PyInterpreterDirectory$</strong>, we manually append a slash and
+the name of the python-minimizer command.</p>
+<p>Next, we add the command arguments to the Arguments field. 
+I prefer not to have the original source file minified but to 
+create a new file with "_min"  appended to the file name.</p>
+<p>To do this, we use the following arguments:</p>
+<p><strong>-o $FileNameWithoutExtension$_min.$FileExt$ $FilePath$</strong></p>
+<p>The -o option specifies the output file and $FilePath$ specifies the
+input file.</p>
+<p>The <strong>Working Directory</strong> is set to <strong>$FileDir$</strong></p>
+<p>When you have completed entering all the information, 
+click <em>OK</em>, and you should see that the Python-minimizer external 
+tool has been created.</p>
+<p><img alt="" src="../images/add_external_tool2.png" /></p>
 
 
 
@@ -762,7 +803,7 @@ or the pseudo-microbit distribution, please send an email to: MisterYsLab@gmail.
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../using_mfs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using the micro:bit Internal File System">
+          <a href="../external/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Pycharm External Tools">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -772,11 +813,27 @@ or the pseudo-microbit distribution, please send an email to: MisterYsLab@gmail.
                 Previous
               </span>
               <div class="md-ellipsis">
-                Using the micro:bit Internal File System
+                Pycharm External Tools
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../uflash/" class="md-footer__link md-footer__link--next" aria-label="Next: Adding uflash to PyCharm External Tools">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Adding uflash to PyCharm External Tools
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     

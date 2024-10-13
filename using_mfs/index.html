@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../using_mfs/">
+        <link rel="prev" href="../upload/">
       
+      
+        <link rel="next" href="../contact/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Contact Info - pseudo-microbit</title>
+        <title>Using the micro:bit Internal File System - pseudo-microbit</title>
       
     
     
@@ -93,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contact Info
+              Using the micro:bit Internal File System
             
           </span>
         </div>
@@ -523,17 +525,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -547,7 +551,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Working With Python Files and External User Tools
@@ -642,10 +646,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../using_mfs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -654,6 +665,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -670,17 +682,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,7 +694,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -728,11 +732,56 @@
   
 
 
-  <h1>Contact Info</h1>
+  <h1>Using the micro:bit Internal File System</h1>
 
-<p>If you have any comments or questions about this tutorial 
-or the pseudo-microbit distribution, please send an email to: MisterYsLab@gmail.com</p>
-<p>Or enter an issue at https://github.com/MrYsLab/pseudo-microbit</p>
+<p>Sometimes, you may wish to add functionality to your project 
+that is not part of the standard micro:bit library.
+To import and gain access to the module, you will need to place the 
+library in the micro:bit persistent file system.</p>
+<p>The <a href="https://github.com/microbit-playground/microbit-servo-class">servo library</a> 
+is a prime example of such a module. 
+The servo distribution explicitly instructs on how to
+import an external module. Just click the servo library link 
+to view the instructions. However, we will use the External tools to work with the micro:bit persistent file system.</p>
+<p>First, we will create a new directory called external_files by 
+clicking on the project name at the top of the Project panel.</p>
+<p><img alt="" src="../images/fs1.png" /></p>
+<p>Follow the instructions 
+<a href="../add_directory/">here</a>
+to add the new directory.
+Name the new
+directory <em>external_modules</em>.</p>
+<p><img alt="" src="../images/fs2.png" /></p>
+<p>Now, create a file called <em>servo.py</em> in that directory. Refer to 
+<a href="../add_file/">this section</a> 
+for creating files.</p>
+<p>Copy the code from the 
+<a href="https://github.com/microbit-playground/microbit-servo-class">servo library</a> into
+the file.</p>
+<p><img alt="" src="../images/fs3.png" /></p>
+<p>Before adding servo.py to the 
+micro:bit persistent file system, let's examine the persistent file system's contents.</p>
+<p>Select Tools/External Tools from the main 
+menu by first clicking on the Hamburger icon.</p>
+<p><img alt="" src="../images/fs4.png" /></p>
+<p>Click on <em>ufs ls</em>.
+The results are displayed in the Run panel at the bottom of the screen. The file
+main.py is displayed. This is a default file that is preinstalled with the
+persistent file system.</p>
+<p><img alt="" src="../images/fs5.png" /></p>
+<p>Now, let's upload <em>servo.py</em> to the persistent file system.</p>
+<p>First, we select servo.py in the Project panel and then choose <em>ufs put</em> in the External Tools menu.</p>
+<p>If we now execute <em>ufs ls</em> again, we see that servo.py has been added.</p>
+<p><img alt="" src="../images/fs6.png" /></p>
+<p>If we now execute a <em>ufs rm</em> followed by a <em>ufs ls</em>, we see that the file was
+removed.</p>
+<p><img alt="" src="../images/fs5.png" /></p>
+<p>If you wish to retrieve a file from the persistent file system using 
+<em>ufs get</em>, you must first have a file in the project with the name of the file
+you want 
+to retrieve, and then select that file name in the Project panel, 
+execute the <em>ufs get</em> 
+external tool.</p>
 
 
 
@@ -762,7 +811,7 @@ or the pseudo-microbit distribution, please send an email to: MisterYsLab@gmail.
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../using_mfs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using the micro:bit Internal File System">
+          <a href="../upload/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Upload The File To The micro:bit">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -772,11 +821,27 @@ or the pseudo-microbit distribution, please send an email to: MisterYsLab@gmail.
                 Previous
               </span>
               <div class="md-ellipsis">
-                Using the micro:bit Internal File System
+                Upload The File To The micro:bit
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../contact/" class="md-footer__link md-footer__link--next" aria-label="Next: Contact Info">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Contact Info
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
