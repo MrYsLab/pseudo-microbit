@@ -18,10 +18,12 @@ def get_pixel(x: int, y: int) -> int:
     integer between 0 (off) and 9 (bright).
     """
 
+
 def set_pixel(x: int, y: int, value: int) -> None:
     """Set the brightness of the LED at column ``x`` and row ``y`` to ``value``,
     which has to be an integer between 0 and 9.
     """
+
 
 def clear() -> None:
     """Set the brightness of all LEDs to 0 (off)."""
@@ -32,9 +34,8 @@ def show(image: Image) -> None:
     """Display the ``image``."""
 
 
-@overload
 def show(iterable: Iterable[Image, str], delay: int = 400, *,
-         wait: bool = True, loop: bool =False, clear: bool = False) -> None:
+         wait: bool = True, loop: bool = False, clear: bool = False) -> None:
     """Display images or letters from the ``iterable`` in sequence, with
     ``delay`` milliseconds between them.
 

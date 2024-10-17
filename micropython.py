@@ -22,9 +22,12 @@ def const(expr: _T) -> _T:
     global variable, and does not take up any memory during execution.
     """
 
+
+
 @overload
 def opt_level() -> int:
     """See opt_level(level)"""
+
 
 @overload
 def opt_level(level: int) -> None:
@@ -49,11 +52,13 @@ def opt_level(level: int) -> None:
     The default optimisation level is usually level 0.
     """
 
+
 def mem_info(verbose = False) -> None:
     """
     Print information about currently used memory. If the verbose argument is
     given then extra information is printed.
     """
+
 
 def qstr_info(verbose = False) -> None:
     """
@@ -64,6 +69,7 @@ def qstr_info(verbose = False) -> None:
     use. In verbose mode it prints out the names of all RAM-interned strings.
     """
 
+
 def stack_use() -> int:
     """
     Return an integer representing the current amount of stack that is being
@@ -71,16 +77,19 @@ def stack_use() -> int:
     should be used to compute differences in stack usage at different points.
     """
 
+
 def heap_lock() -> None:
     """
     See heap_unlock()
     """
+
 
 def heap_unlock() -> None:
     """
     Lock or unlock the heap. When locked no memory allocation can occur and a
     ``MemoryError`` will be raised if any heap allocation is attempted.
     """
+
 
 def kbd_intr(chr: int) -> None:
     """
