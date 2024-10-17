@@ -5,7 +5,7 @@ repo_url: https://github.com/MrYsLab/pseudo-microbit
 copyright: > # should remain a link to the original theme
   Copyright &copy; 2024 Alan Yorinks &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Last 
   Modified:
-  October 11, 2024<br>
+  October 17, 2024<br>
 
 
 nav:
@@ -13,9 +13,7 @@ nav:
   - Installing And Configuring PyCharm:
       - Installing PyCharm: pycharm_install.md
       - Creating A PyCharm Project: create_project.md
-      - Install the required packages:
-        - Installing pseudo-microbit: pm_install.md
-        - Installing python-minimizer: minimizer_install.md
+      - Installing pseudo-microbit: pm_install.md
       - Configuring PyCharm To Run External Tools:
         - Pycharm External Tools: external.md
         - Adding python-minimizer to PyCharm External Tools: minimizer.md
