@@ -32,8 +32,8 @@ from typing import Literal
 
 # pseudo values for sounds
 
-SOUND = ['GIGGLE', 'HAPPY', 'HELLO', 'MYSTERIOUS', 'SAD',
-         'SLIDE', 'SOARING', 'SPRING', 'TWINKLE', 'YAWN']
+# SOUND = ['GIGGLE', 'HAPPY', 'HELLO', 'MYSTERIOUS', 'SAD',
+#          'SLIDE', 'SOARING', 'SPRING', 'TWINKLE', 'YAWN']
 
 """
 GIGGLE = 0
@@ -48,10 +48,10 @@ TWINKLE = 8
 YAWN = 9
 """
 
-the_source = {'Sound', 'SoundEffect', 'AudioFrame'}
+# the_source = {'Sound', 'SoundEffect', 'AudioFrame'}
 
 
-def play(source: Literal["Sound", "SoundEffect", "AudioFrame"], wait: bool = True,
+def play(source: str, wait: bool = True,
          pin: MicroBitPin = pin0,
          return_pin: MicroBitPin = None) -> None:
     """
@@ -86,3 +86,83 @@ def play(source: Literal["Sound", "SoundEffect", "AudioFrame"], wait: bool = Tru
 
 
     """
+
+
+def is_playing() -> bool:
+    """
+    Returns:
+
+        True if audio is playing, otherwise returns False.
+    """
+
+
+def stop() -> None:
+    """
+    Stops all audio playback.
+    """
+
+
+class SoundEffect(freq_start=500, freq_end=2500, duration=500, vol_start=255,
+                  vol_end=0, waveform=WAVEFORM_SQUARE, fx=FX_NONE, shape=SHAPE_LOG):
+    """
+    An SoundEffect instance represents a sound effect, composed by a
+    set of parameters configured via the constructor or attributes.
+
+    All the parameters are optional, with default values as shown above,
+    and they can all be modified via attributes of the same name. For example,
+    we can first create an effect my_effect = SoundEffect(duration=1000),
+    and then change its attributes my_effect.duration = 500.
+
+    Parameters:
+
+        freq_start – Start frequency in Hertz (Hz), default: 500
+
+        freq_end – End frequency in Hertz (Hz), default: 2500
+
+        duration – Duration of the sound (ms), default: 500
+
+        vol_start – Start volume value, range 0-255, default: 255
+
+        vol_end – End volume value, range 0-255, default: 0
+
+        waveform – Type of waveform shape, one of these values:
+            WAVEFORM_SINE, WAVEFORM_SAWTOOTH, WAVEFORM_TRIANGLE,
+            WAVEFORM_SQUARE, WAVEFORM_NOISE (randomly generated noise). Default: WAVEFORM_SQUARE
+
+        fx – Effect to add on the sound, one of the following values:
+            FX_TREMOLO, FX_VIBRATO, FX_WARBLE, or FX_NONE. Default: FX_NONE
+
+        shape – The type of the interpolation curve between the start and
+            end frequencies, different wave shapes have different rates of
+            change in frequency. One of the following values: SHAPE_LINEAR,
+            SHAPE_CURVE, SHAPE_LOG. Default: SHAPE_LOG
+
+
+    """
+
+    def copy(self) -> SoundEffect:
+        """
+        Returns:
+            A copy of the SoundEffect.
+        """
+
+
+class AudioFrame:
+    """
+    An AudioFrame object is a list of 32 samples each of which
+    is an unsigned byte (whole number between 0 and 255).
+
+    It takes just over 4 ms to play a single frame.
+    """
+
+    def copyfrom(self, other: 'AudioFrame') -> None:
+        """
+        Overwrite the data in this AudioFrame with the data from another AudioFrame instance.
+
+        Parameters:
+
+        other – AudioFrame instance from which to copy the data.
+
+
+        """
+
