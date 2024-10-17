@@ -4,7 +4,7 @@ Python standard library. It contains functions for generating random behaviour.
 
 To access this module you need to:
 
-import random
+    # import random
 
 """
 from typing import List, Any, overload

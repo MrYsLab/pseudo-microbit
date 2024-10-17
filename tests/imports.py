@@ -7,11 +7,10 @@ import neopixel
 import os
 import power
 import radio
-import random
+from archive import random
 import speech
 import utime
 from microbit.SoundEvent import SOUND_EVENT_CLAP
-from microbit.microphone import was_event
 
 accelerometer.get_gestures()
 compass.calibrate()
